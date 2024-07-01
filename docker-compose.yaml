@@ -1,0 +1,16 @@
+version: "3.10"
+
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    restart: always
+    environment:
+      - POETRY_NO_INTERACTION=1
+      - POETRY_VIRTUALENVS_IN_PROJECT=1
+      - POETRY_VIRTUALENVS_CREATE=1
+      - POETRY_CACHE_DIR=/tmp/poetry_cache
+
+    image: scrape_jobs
+    container_name: scrape-jobs-service
