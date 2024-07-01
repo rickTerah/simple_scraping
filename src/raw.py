@@ -26,6 +26,6 @@ def get_job_titles(url):
 
     csv_data.insert(0, ['Title', 'Location', 'Company', 'Salary'])
 
-    save_to_csv(csv_data, 'job_titles.csv')
+    # save_to_csv(csv_data, 'job_titles.csv')
 
     return job_titles
